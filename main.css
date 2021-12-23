@@ -1,130 +1,117 @@
 /* Common */
 body {
-  display: block;
-  height: 100%;
-  min-width: 400px;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-  color: #222;
+  font-family: arial, sans-serif;
 }
 
-/* Page */
-.page {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
 }
 
-/* Data Panel */
-.data-tab {
-  display: flex;
-  align-items: center;
-  padding: 6px;
-  flex-shrink: 0;
-  box-sizing: border-box;
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }
 
-.data-panel {
-  display: flex;
-  justify-content: flex-end;
-  height: 25px;
-  width: 100%;
-  padding: 5px 5px 5px 5px;
+#google-home {
+  padding: 0px;
 }
 
-.data-item {
-  padding: 0px 8px;
+/* Header */
+#google-header a {
+  text-decoration: none;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.87);
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: middle;
 }
 
-.data-acc {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+#apps {
+  color: #5f6368;
+  padding-right: 18px;
 }
 
-.data-app {
-  width: 24px;
-  height: 24px;
+.header-left {
+  margin-right: 24px;
 }
 
-/* Doodle */
-.doodle {
+.header-right {
+  margin-left: 18px;
+}
+
+/* Logo */
+.logo {
+  margin-top: 192px;
+}
+
+#google-logo {
+  height: 92px;
+  width: 272px;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  object-position: center bottom;
-  height: 200px;
-  vertical-align: bottom;
 }
 
-/* Search Zone */
-.search-zone {
-  width: 90%;
-  background: #fff;
-  display: flex;
-  border: 1px solid #dfe1e5;
-  box-shadow: none;
-  border-radius: 24px;
-  z-index: 3;
-  height: 44px;
+/* Search */
+.input {
+  border: 1px solid lightgray;
+  height: 45px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  width: 75vw;
   margin: 0 auto;
+  margin-top: 40px;
+  max-width: 560px;
+}
+
+.input input {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
   outline: none;
-  padding-left: 28px;
 }
 
-.wrapper {
-  position: relative;
+.search-button {
+  padding-top: 18px;
 }
 
-.wrapper-input {
-  position: relative;
-  max-width: 584px;
-  margin: 0 auto;
-}
-
-.magnifying {
-  position: absolute;
-  top: 0px;
-  left: 5%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.keyboard {
-  position: absolute;
-  top: 33%;
-  right: 5%;
-  bottom: 0;
-}
-
-.microphone {
-  position: absolute;
-  top: 33%;
-  left: 86%;
-}
-
-/* Button */
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 16px 16px 16px 16px;
-}
-
-.search-gg {
+  margin: 11px 4px;
+  padding: 0px 16px;
   background-color: #f8f9fa;
   border: 1px solid #f8f9fa;
   border-radius: 4px;
   color: #3c4043;
   font-family: arial, sans-serif;
   font-size: 14px;
-  margin: 11px 8px;
-  padding: 0 16px;
-  line-height: 35px;
+  line-height: 27px;
   height: 36px;
   min-width: 54px;
   text-align: center;
@@ -132,82 +119,79 @@ body {
   user-select: none;
 }
 
-.quick-search {
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  color: #3c4043;
-  font-family: arial, sans-serif;
-  font-size: 14px;
-  margin: 11px 8px;
-  padding: 0 16px;
-  line-height: 35px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
+#microphone {
+  padding-left: 18px;
 }
 
-.lang {
-  text-align: center;
+.language-show {
+  line-height: 28px;
+  color: #3c4043;
+  display: inline-block;
+  font-size: small;
+  margin-bottom: 24px;
+}
+
+.language-show a {
+  text-decoration: none;
+}
+
+.language-show a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
-.footer-language {
-  font-size: 15px;
-  padding: 15px 30px;
-  border-bottom: 1px solid #dadec0;
-  color: rgba(0, 0, 0, 0.54);
+footer {
+  background-color: #f2f2f2;
   position: fixed;
-  bottom: 48px;
+  bottom: 0;
+  height: 10%;
   width: 100%;
 }
 
-.footer-1 {
+.google-footer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.language-footer {
+  height: 50%;
+  border-bottom: 1px solid lightgray;
+}
+
+.language-footer p {
+  color: #70757a;
   font-size: 15px;
-  padding: 15px 30px;
-  border-bottom: 1px solid #dadec0;
-  color: rgba(0, 0, 0, 0.54);
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
+  margin-top: 18px;
 }
 
-.about {
-  padding: 15px;
+.group-footer {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
 }
 
-.ad {
-  padding: 15px;
+.group-footer ul li a {
+  font-size: 14px;
+  color: #70757a;
+  text-decoration: none;
 }
 
-.business {
-  padding: 15px;
+.group-footer ul li a:hover {
+  text-decoration: underline;
 }
 
-.how-search {
-  padding: 15px;
+.group-footer p {
+  margin-top: 18px;
 }
 
-.footer-2 {
-  font-size: 15px;
-  padding: 15px 30px;
-  color: rgba(0, 0, 0, 0.54);
-  position: fixed;
-  bottom: 0px;
-  left: 81%;
-  width: 100%;
+.left-footer,
+.right-footer {
+  display: flex;
 }
 
-.privacy {
-  padding: 15px;
-}
-
-.policies {
-  padding: 15px;
-}
-
-.setting {
-  padding: 15px;
+.left-footer li,
+.right-footer li {
+  margin-right: 15px;
 }
