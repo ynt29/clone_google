@@ -53,6 +53,10 @@ body {
   vertical-align: middle;
 }
 
+#google-header a:hover {
+  text-decoration: underline;
+}
+
 #apps {
   color: #5f6368;
   padding-right: 18px;
@@ -81,35 +85,39 @@ body {
 
 /* Search */
 .input {
+  display: flex;
+  align-items: center;
   border: 1px solid lightgray;
-  height: 45px;
-  padding: 9px 20px;
-  border-radius: 999px;
-  width: 75vw;
+  border-radius: 48px;
+  height: 44px;
+  width: auto;
+  padding: 5px 8px 0 14px;
   margin: 0 auto;
   margin-top: 40px;
-  max-width: 560px;
+  max-width: 584px;
 }
 
 .input input {
   flex: 1;
-  padding: 9px 20px;
+  padding: 4px 20px;
   border: none;
   outline: none;
+  width: 184px;
 }
 
-.search-button {
+.button-panel {
   padding-top: 18px;
+  display: flex;
+  justify-content: center;
 }
 
-.button {
+.button-panel button {
   margin: 11px 4px;
   padding: 0px 16px;
   background-color: #f8f9fa;
   border: 1px solid #f8f9fa;
   border-radius: 4px;
   color: #3c4043;
-  font-family: arial, sans-serif;
   font-size: 14px;
   line-height: 27px;
   height: 36px;
@@ -119,8 +127,28 @@ body {
   user-select: none;
 }
 
+.button-panel button:hover {
+  box-shadow: 0 1px 1px rgb(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  color: #202124;
+  border: 1px solid #dadec0;
+}
+
+.button-panel button:active,
+.button-panel button:focus {
+  border: 1px solid #4285f4;
+}
+
+#magnifying {
+  color: gray;
+}
+
+#keyboard {
+  margin-right: 16px;
+}
+
 #microphone {
-  padding-left: 18px;
+  margin-right: 8px;
 }
 
 .language-show {
@@ -132,6 +160,7 @@ body {
 }
 
 .language-show a {
+  color: #1a0dab;
   text-decoration: none;
 }
 
